@@ -1,0 +1,25 @@
+@use "../global" as g;
+
+body{
+  font-size: 16px;
+  color: g.$text-color;
+  @include g.main-font;
+  width: 100%;
+  background-color: g.$background-color1;
+  @include g.sp(){
+    font-size: 14px;
+  }
+  overflow: hidden;
+}
+
+.pc{
+  @include g.sp{
+    display: none;
+  }
+}
+
+.sp{
+  @include g.pc{
+    display: none;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../global" as g;
+
+.mainVisual{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  h2{
+    position: absolute;
+    top: 45%;
+    left: 30px;
+    color: #fff;
+    font-size: 45px;
+  }
+
+  @include g.pc{
+    width: 100%;
+    height: 100vh;
+
+    img{
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center right;
+    }
+  }
+
+  @include g.tablet{
+    img{
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center right;
+    }
+  }
+
+  @include g.sp{
+    img{
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    h2{
+      font-size: 30px;
+    }
+  }
+}
