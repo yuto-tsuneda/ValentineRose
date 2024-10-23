@@ -178,3 +178,9 @@
 .navContent.active{
   right: 0;
 }
+
+body.no-scroll,
+html.no-scroll{
+  overflow: hidden;
+  height: 100%;
+}

@@ -56,7 +56,7 @@
 .pcNav__right .fa-calendar-days {
   margin: 0 15px;
 }
-@media (max-width: 635px) {
+@media (max-width: 635px) and (min-width: 376px) {
   .pcNav {
     display: none;
   }
@@ -188,6 +188,12 @@
   right: 0;
 }
 
+body.no-scroll,
+html.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -285,6 +291,12 @@ body {
 
 @media (max-width: 375px) {
   .pc {
+    display: none;
+  }
+}
+
+@media (max-width: 635px) and (min-width: 376px) {
+  .tablet {
     display: none;
   }
 }

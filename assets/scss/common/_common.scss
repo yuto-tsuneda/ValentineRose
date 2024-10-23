@@ -18,6 +18,12 @@ body{
   }
 }
 
+.tablet{
+  @include g.tablet{
+    display: none;
+  }
+}
+
 .sp{
   @include g.pc{
     display: none;

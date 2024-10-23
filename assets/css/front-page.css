@@ -56,7 +56,7 @@
 .pcNav__right .fa-calendar-days {
   margin: 0 15px;
 }
-@media (max-width: 635px) {
+@media (max-width: 635px) and (min-width: 376px) {
   .pcNav {
     display: none;
   }
@@ -188,6 +188,12 @@
   right: 0;
 }
 
+body.no-scroll,
+html.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -289,6 +295,12 @@ body {
   }
 }
 
+@media (max-width: 635px) and (min-width: 376px) {
+  .tablet {
+    display: none;
+  }
+}
+
 @media (min-width: 636px) {
   .sp {
     display: none;
@@ -305,7 +317,7 @@ body {
   top: 45%;
   left: 30px;
   color: #fff;
-  font-size: 45px;
+  font-size: 64px;
 }
 @media (min-width: 636px) {
   .mainVisual {
@@ -321,7 +333,7 @@ body {
        object-position: center right;
   }
 }
-@media (max-width: 635px) {
+@media (max-width: 635px) and (min-width: 376px) {
   .mainVisual img {
     width: 100%;
     height: 100vh;
@@ -339,6 +351,370 @@ body {
        object-fit: cover;
   }
   .mainVisual h2 {
-    font-size: 30px;
+    font-size: 32px;
   }
+}
+
+.news {
+  width: 100%;
+  background-color: #F9F8F6;
+  margin-top: 100px;
+  color: #54372D;
+}
+.news__title {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 636px) {
+  .news__title h2 {
+    color: #CA7F13;
+    font-size: 84px;
+  }
+  .news__title h2 span {
+    font-family: "annabelle-jf", sans-serif;
+    color: #CA7F13;
+    color: rgba(202, 127, 19, 0.2);
+    font-size: 120px;
+    margin-left: -100px;
+  }
+  .news__title p {
+    font-size: 14px;
+    color: #CA7F13;
+    margin-top: -50px;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .news__title h2 {
+    color: #CA7F13;
+    font-size: 84px;
+  }
+  .news__title h2 span {
+    font-family: "annabelle-jf", sans-serif;
+    color: #CA7F13;
+    color: rgba(202, 127, 19, 0.2);
+    font-size: 120px;
+    margin-left: -100px;
+  }
+  .news__title p {
+    font-size: 14px;
+    color: #CA7F13;
+    margin-top: -50px;
+  }
+}
+@media (max-width: 375px) {
+  .news__title h2 {
+    color: #CA7F13;
+    font-size: 48px;
+  }
+  .news__title h2 span {
+    font-family: "annabelle-jf", sans-serif;
+    color: #CA7F13;
+    font-size: 72px;
+    margin-left: -60px;
+    color: rgba(202, 127, 19, 0.2);
+  }
+}
+@media (min-width: 636px) {
+  .news__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 30px auto 100px;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .news__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 30px auto 100px;
+  }
+}
+@media (max-width: 375px) {
+  .news__list {
+    width: 90%;
+    margin: 30px auto 30px;
+  }
+}
+@media (min-width: 636px) {
+  .news__list__item {
+    display: block;
+    width: 33%;
+    border-left: 1px solid #54372D;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .news__list__item {
+    display: block;
+    width: 33%;
+    border-left: 1px solid #54372D;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .news__list__item {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #54372D;
+    padding: 20px 0;
+  }
+}
+@media (min-width: 636px) {
+  .news__list__item:last-child {
+    border-right: 1px solid #333;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .news__list__item:last-child {
+    border-right: 1px solid #333;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .news__list__item:last-child {
+    border-bottom: 1px solid #333;
+  }
+}
+.news__list__date {
+  font-size: 14px;
+}
+.news__list__title {
+  margin: 16px 0;
+  font-size: 18px;
+  overflow: hidden;
+  width: 100%;
+  max-height: 50px;
+}
+.news__list__category {
+  font-size: 14px;
+  color: #54372D;
+}
+.news__list__date, .news__list__title, .news__list__category {
+  display: block;
+}
+
+@media (min-width: 636px) {
+  .viewAll {
+    width: 90%;
+    margin: -20px auto 0;
+    text-align: right;
+  }
+  .viewAll__a {
+    border-radius: 30px;
+    padding: 5px 40px;
+    background-color: #949E33;
+    color: #fff;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .viewAll {
+    width: 90%;
+    margin: -20px auto 0;
+    text-align: right;
+  }
+  .viewAll__a {
+    border-radius: 30px;
+    padding: 5px 40px;
+    background-color: #949E33;
+    color: #fff;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media (max-width: 375px) {
+  .viewAll {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .viewAll__a {
+    border-radius: 30px;
+    padding: 5px 40px;
+    background-color: #949E33;
+    color: #fff;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 12px;
+  }
+}
+
+.conceptPc {
+  width: 85%;
+  margin: 0 auto;
+}
+.conceptPc__top {
+  width: 100%;
+  position: relative;
+  text-align: right;
+  margin-bottom: 50px;
+}
+.conceptPc__top img {
+  width: 70%;
+  display: inline;
+}
+.conceptPc__top__title {
+  position: absolute;
+  text-align: left;
+  color: #CA7F13;
+}
+@media (min-width: 636px) {
+  .conceptPc__top__title {
+    top: 30%;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .conceptPc__top__title {
+    top: 20%;
+  }
+}
+@media (min-width: 636px) {
+  .conceptPc__top__title h2 {
+    font-size: 84px;
+  }
+  .conceptPc__top__title h2 span {
+    font-size: 120px;
+    margin-left: -300px;
+    font-family: "annabelle-jf", sans-serif;
+    color: #CA7F13;
+    color: rgba(202, 127, 19, 0.2);
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .conceptPc__top__title h2 {
+    font-size: 54px;
+  }
+  .conceptPc__top__title h2 span {
+    font-size: 70px;
+    margin-left: -200px;
+    font-family: "annabelle-jf", sans-serif;
+    color: #CA7F13;
+    color: rgba(202, 127, 19, 0.2);
+  }
+}
+.conceptPc__top__title p {
+  font-size: 14px;
+}
+@media (min-width: 636px) {
+  .conceptPc__top__title p {
+    margin-top: -50px;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .conceptPc__top__title p {
+    margin-top: -30px;
+  }
+}
+@media (min-width: 636px) {
+  .conceptPc__top__title h3 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 635px) and (min-width: 376px) {
+  .conceptPc__top__title h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+.conceptPc__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.conceptPc__bottom__img {
+  width: 40%;
+}
+.conceptPc__bottom p {
+  width: 50%;
+  font-size: 18px;
+  color: #54372D;
+}
+
+.concept {
+  margin-bottom: 100px;
+}
+.concept__viewMore {
+  width: 80%;
+  margin: 0 auto;
+  text-align: right;
+}
+.concept__viewMore a {
+  font-size: 18px;
+  color: #54372D;
+  position: relative;
+  display: inline-block;
+}
+.concept__viewMore__lineArrow {
+  width: 120%;
+  height: 10px;
+  border-bottom: 1px solid #54372D;
+  border-right: 1px solid #54372D;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+  margin-top: -10px;
+}
+
+.conceptSp {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.conceptSp__top {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.conceptSp__bottom {
+  width: 100%;
+  text-align: right;
+  position: relative;
+  margin-bottom: 30px;
+}
+.conceptSp__bottom img {
+  display: inline;
+}
+.conceptSp__bottom__title {
+  position: absolute;
+  color: #CA7F13;
+  top: 5%;
+  text-align: left;
+}
+.conceptSp__bottom__title h2 {
+  font-size: 48px;
+}
+.conceptSp__bottom__title h2 span {
+  font-size: 72px;
+  margin-left: -200px;
+  font-family: "annabelle-jf", sans-serif;
+  color: #CA7F13;
+  color: rgba(202, 127, 19, 0.2);
+}
+.conceptSp__bottom__title p {
+  margin-top: -30px;
+  font-size: 16px;
+}
+.conceptSp__bottom__title h3 {
+  margin-top: 30px;
+  font-size: 18px;
+}
+.conceptSp__content {
+  width: 90%;
+  margin: 0 auto;
+  color: #54372D;
 }

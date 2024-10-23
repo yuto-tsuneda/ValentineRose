@@ -13,7 +13,7 @@
 }
 
 @mixin tablet{
-  @media(max-width:val.$tablet){
+  @media(max-width:val.$tablet) and (min-width: 376px){
     @content;
   }
 }
