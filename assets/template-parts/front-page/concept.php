@@ -3,7 +3,7 @@
     <div class="conceptPc__top">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-concept_01-pc.webp" alt="パソコン用コンセプト画像1">
       <div class="conceptPc__top__title">
-        <h2>CONCEPT<span>CONCEPT</span></h2>
+        <h2>CONCEPT<span>Concept</span></h2>
         <p>コンセプト</p>
         <h3>洗練されたワンランク上の女性を目指す</h3>
       </div>
@@ -31,7 +31,7 @@
     <div class="conceptSp__bottom">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-concept_02-sp.webp" alt="スマートフォン用コンセプト画像2">
       <div class="conceptSp__bottom__title">
-        <h2>CONCEPT<span>CONCEPT</span></h2>
+        <h2>CONCEPT<span>Concept</span></h2>
         <p>コンセプト</p>
       <h3>洗練された<br>ワンランク上の<br>女性を目指す</h3>
       </div>

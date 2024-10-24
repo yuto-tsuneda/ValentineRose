@@ -16,5 +16,8 @@
 <div class="concept">
   <?php get_template_part('assets/template-parts/front-page/concept'); ?>
 </div>
+<div class="feature">
+  <?php get_template_part('assets/template-parts/front-page/feature'); ?>
+</div>
 
 <?php get_footer(); ?>
