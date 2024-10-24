@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
     }
   });
 
-// feature
+// featureSp
 jQuery('.featureSp__top__container').slick({
   autoplay: true,
   autoplaySpeed: 5000,
@@ -47,4 +47,95 @@ jQuery('.featureSp__bottom').slick({
   speed: 1000,
   swipeToSlide: true
 });
+// featurePc
+jQuery('.featurePc__content__left').slick({
+  autoplay: true,
+  autoplaySpeed: 5000,
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: false,
+  cssEase: 'ease-in-out',
+  speed: 1000,
+  swipeToSlide: true
+});
+
+jQuery('.featurePc__content__left').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+  jQuery('.featurePc__content__left .slick-slide').css({
+      opacity: 0,
+      transform: 'translateX(-20px)'
+  });
+});
+
+jQuery('.featurePc__content__left').on('afterChange', function(event, slick, currentSlide) {
+  jQuery('.featurePc__content__left .slick-current').css({
+      opacity: 1,
+      transform: 'translateX(0)' 
+  });
+});
+
+jQuery('.featurePc__content__center').slick({
+  autoplay: true,
+  autoplaySpeed: 5000,
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: false,
+  cssEase: 'ease-in-out',
+  speed: 1000,
+  swipeToSlide: true
+});
+
+jQuery('.featurePc__content__center').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+  jQuery('.featurePc__content__center .slick-slide').css({
+      opacity: 0,
+      transform: 'translateX(-20px)' 
+  });
+});
+
+jQuery('.featurePc__content__center').on('afterChange', function(event, slick, currentSlide) {
+  jQuery('.featurePc__content__center .slick-current').css({
+      opacity: 1,
+      transform: 'translateX(0)' 
+  });
+});
+
+jQuery('.featurePc__content__right').slick({
+  autoplay: true,
+  autoplaySpeed: 5000,
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  fade: false,
+  cssEase: 'ease-in-out',
+  speed: 1000,
+  swipeToSlide: true
+});
+
+jQuery('.featurePc__content__right').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+  jQuery('.featurePc__content__right .slick-slide').css({
+      opacity: 0,
+      transform: 'translateX(-20px)' 
+  });
+});
+
+jQuery('.featurePc__content__right').on('afterChange', function(event, slick, currentSlide) {
+  jQuery('.featurePc__content__right .slick-current').css({
+      opacity: 1,
+      transform: 'translateX(0)' 
+  });
+});
+
+
+
+
+
+
+
 });
