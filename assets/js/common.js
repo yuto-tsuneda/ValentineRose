@@ -58,18 +58,6 @@ jQuery('.featureSp__bottom').slick({
 //     infinite: true
 // });
 
-
-jQuery('.featurePc__content__center').slick({
-  fade: true,
-    speed: 800,
-    autoplaySpeed: 5000,
-    arrows: false,
-    autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true
-});
-
 jQuery('.featurePc__content__right').slick({
   fade: true,
     speed: 800,
@@ -81,7 +69,7 @@ jQuery('.featurePc__content__right').slick({
     infinite: true
 });
 
-$('.featurePc__content__center').on('afterChange', function(event, slick, currentSlide) {
+$('.featurePc__content__right').on('afterChange', function(event, slick, currentSlide) {
   // すべてのタイトルを初期化
   $('.featurePc__content__titleCover').removeClass('active');
   

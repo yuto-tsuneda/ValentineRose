@@ -517,25 +517,32 @@
       color: rgba(202, 127, 19, 1);
     }
 
-      h3{
-        
-      }
-
     &__left{
-      width: 33%;
+      width: 20%;
       font-size: 18px;
     }
 
-    &__center{
-      width: 33%;
+    &__rWrapper{
+      display: flex;
+      justify-content: right;
+    }
 
+    &__rImg{
+      width: 50%;
       img{
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
       }
     }
 
+    &__wrapper{
+      width: 40%;
+      margin-top: 50px;
+      padding: 0 10px;
+    }
+
     &__right{
-      width: 33%;
+      width: 80%;
 
       span{
         height: 2px;
@@ -551,9 +558,9 @@
 
         & + p{
           color: rgba(202, 127, 19, 0.8);
+          line-height: 36px;
         }
       }
     }
   }
 }
-
