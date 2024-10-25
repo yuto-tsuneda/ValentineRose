@@ -5,9 +5,9 @@
       </div>
       <div class="featurePc__content">
         <div class="featurePc__content__left">
-          <h3>Ⅰ　高性能の機械を導入</h3>
-          <h3>Ⅱ　痛みを最小限まで抑えた施術</h3>
-          <h3>Ⅲ　一回の施術は<br>入店〜退店まで役30分</h3>
+          <div class="featurePc__content__titleCover active"><span>Ⅰ</span><h3>高性能の機械を導入</h3></div>
+          <div class="featurePc__content__titleCover"><span>Ⅱ</span><h3>痛みを最小限まで抑えた施術</h3></div>
+          <div class="featurePc__content__titleCover"><span>Ⅲ</span><h3>一回の施術は<br>入店〜退店まで役30分</h3></div>
         </div>
         <div class="featurePc__content__center">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/feature_01-pc.webp" alt="フューチャー画像1">
