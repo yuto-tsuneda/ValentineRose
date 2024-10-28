@@ -5,9 +5,9 @@
   </div>
   <div class="footerNav__nav">
     <ul class="footerNav__nav__top">
-      <li><a href="<?php ?>">TOP</a></li>
-      <li><a href="<?php home_url('/concept'); ?>">Concept</a></li>
-      <li><a href="<?php home_url('/price'); ?>">Price</a></li>
+      <li><a href="<?php echo home_url(); ?>">TOP</a></li>
+      <li><a href="<?php echo home_url('/concept'); ?>">Concept</a></li>
+      <li><a href="<?php echo home_url('/price'); ?>">Price</a></li>
       <li><a href="<?php ?>">News</a></li>
       <li><a href="<?php ?>">Reserve</a></li>
     </ul>

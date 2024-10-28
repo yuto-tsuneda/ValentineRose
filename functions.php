@@ -13,7 +13,12 @@ function theme_enqueue_scripts(){
 
   if(is_front_page()){
     wp_enqueue_style('front-style',$theme_directory . '/assets/css/front-page.css', array('common-style'), null);
-    wp_enqueue_script('front-script',$theme_directory . '/assets/css/front-page.js', array('common.js'), null, true);
+    wp_enqueue_script('front-script',$theme_directory . '/assets/js/front-page.js', array('common-script'), null, true);
+  }
+
+  if(is_page('concept')){
+    wp_enqueue_style('concept-style', $theme_directory . '/assets/css/page-concept.css', array('common-style'), null);
+    wp_enqueue_script('concept-script', $theme_directory . '/assets/js/page-concept.js', array('common-script'), null, true);
   }
 }
 add_action('wp_enqueue_scripts','theme_enqueue_scripts');

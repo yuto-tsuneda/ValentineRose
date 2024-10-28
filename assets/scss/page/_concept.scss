@@ -1,0 +1,8 @@
+@use "../global" as g;
+
+.concept{
+  &__header{
+    height: 250px;
+    background-color: g.$background-color1;
+  }
+}
