@@ -1,0 +1,45 @@
+@use "../../global" as g;
+
+.snsLink{
+  color: g.$main-color;
+  width: 100%;
+  margin-top: 50px;
+
+  h2{
+    font-size: 80px;
+  }
+
+  p{
+    font-size: 16px;
+  }
+  
+  &__flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+  }
+
+  &__left{
+    width: 45%;
+  }
+
+  &__right{
+    width: 45%;
+  }
+
+  &__center{
+    width: 1px;
+    height: 250px;
+    background-color: g.$main-color;
+  }
+
+  &__underbar{
+    height: 1px;
+    width: 80%;
+    background-color: g.$main-color;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}

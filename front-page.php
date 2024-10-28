@@ -20,4 +20,25 @@
   <?php get_template_part('assets/template-parts/front-page/feature'); ?>
 </div>
 
+<div class="priceMenuTop">
+  <div class="priceMenuTop__title">
+    <h2>PRICE MENU<span>Pricemenu</span></h2>
+    <p>メニュー料金</p>
+  </div>
+  <div class="priceMenuTop__menu">
+    <?php get_template_part('assets/template-parts/pricemenu'); ?>
+  </div>
+</div>
+
+<div class="faqTop">
+  <div class="faqTop__title">
+    <h2>FAQ<span>FAQ</span></h2>
+    <p>よくある質問</p>
+  </div>
+  <?php get_template_part('assets/template-parts/front-page/faq'); ?>
+</div>
+
+<?php get_template_part('assets/template-parts/footer/reserveLink'); ?>
+<?php get_template_part('assets/template-parts/footer/snsLink'); ?>
+
 <?php get_footer(); ?>

@@ -1,0 +1,50 @@
+@use "../../global" as g;
+
+.reserveMenu{
+  font-size: 100px;
+  background-image: url("../../../../../../../wp-content/themes/valentinerose/assets/images/reserve-link-pc.webp");
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: g.$main-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @include g.sp{
+    height: 200px;
+    background-image: url("../../../../../../../wp-content/themes/valentinerose/assets/images/reserve-link-sp.webp");
+  }
+
+  h2{
+    font-size: 80px;
+    position: relative;
+    z-index: 1;
+    @include g.sp{
+      font-size: 48px;
+    }
+  }
+
+  p{
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    @include g.sp{
+      font-size: 12px;
+    }
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 70, 70, 0.8);
+    z-index: -0;
+  }
+}

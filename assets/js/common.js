@@ -47,17 +47,6 @@ jQuery('.featureSp__bottom').slick({
   swipeToSlide: true
 });
 // featurePc
-// jQuery('.featurePc__content__left').slick({
-//   fade: true,
-//     speed: 800,
-//     autoplaySpeed: 5000,
-//     arrows: false,
-//     autoplay: true,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     infinite: true
-// });
-
 jQuery('.featurePc__content__right').slick({
   fade: true,
     speed: 800,
@@ -77,10 +66,17 @@ $('.featurePc__content__right').on('afterChange', function(event, slick, current
   $('.featurePc__content__titleCover').eq(currentSlide).addClass('active');
 });
 
+//accordion
+  jQuery('.faq__accordion').click(function() {
+    // 全てのアコーディオンを閉じ、三角を元の状態に戻す
+    jQuery('.faq__accordion__a').slideUp();
+    jQuery('.faq__accordion__q p').css('transform', 'rotate(0deg)');
 
-
-
-
-
-
+    // クリックされたアコーディオンがすでに開いているかチェック
+    if (!jQuery(this).find('.faq__accordion__a').is(':visible')) {
+      // クリックされたアコーディオンを開く
+      jQuery(this).find('.faq__accordion__a').slideDown();
+      jQuery(this).find('.faq__accordion__q p').css('transform', 'rotate(180deg)');
+    }
+  });
 });

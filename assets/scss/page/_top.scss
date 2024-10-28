@@ -62,7 +62,7 @@
         font-size: 84px;
         span{
           @include g.sub-font;
-          color: rgba(202, 127, 19, 0.2);
+          color: #CA7F1314;
           font-size: 120px;
           margin-left: -100px;
         }
@@ -79,7 +79,7 @@
         font-size: 84px;
         span{
           @include g.sub-font;
-          color: rgba(202, 127, 19, 0.2);
+          color: #CA7F1314;
           font-size: 120px;
           margin-left: -100px;
         }
@@ -98,7 +98,7 @@
           @include g.sub-font;
           font-size: 72px;
           margin-left: -60px;
-          color: rgba(202, 127, 19, 0.2);
+          color: #CA7F1314;
         }
       }
     }
@@ -258,7 +258,7 @@
             font-size: 120px;
             margin-left: -300px;
             @include g.sub-font;
-            color: rgba(202, 127, 19, 0.2);
+            color: #CA7F1314;
           }
         }
         @include g.tablet{
@@ -267,7 +267,7 @@
             font-size: 70px;
             margin-left: -200px;
             @include g.sub-font;
-            color: rgba(202, 127, 19, 0.2);
+            color: #CA7F1314;
           }
         }
       }
@@ -371,7 +371,7 @@
           font-size: 72px;
           margin-left: -200px;
           @include g.sub-font;
-          color: rgba(202, 127, 19, 0.2);
+          color: #CA7F1314;
         }
       }
       p{
@@ -413,7 +413,7 @@
 
         span{
           @include g.sub-font;
-          color: rgba(202, 127, 19, 0.2);
+          color: #CA7F1314;
           font-size: 72px;
           width: fit-content;
           position: absolute;
@@ -481,7 +481,7 @@
 
       span{
         @include g.sub-font;
-        color: rgba(202, 127, 19, 0.2);
+        color: #CA7F1314;
         position: absolute;
         left: 0;
         top: -40px;
@@ -559,6 +559,167 @@
         & + p{
           color: rgba(202, 127, 19, 0.8);
           line-height: 36px;
+        }
+      }
+    }
+  }
+}
+
+.priceMenuTop{
+  width: 85%;
+  margin: 0 auto;
+  @include g.pc{
+    margin-top: 200px;
+    margin-bottom: 150px;
+  }
+  @include g.sp{
+    margin: 150px auto;
+  }
+  &__title{
+    h2{
+      font-size: 84px;
+      position: relative;
+      color: g.$main-color;
+      @include g.sp{
+        font-size: 48px;
+      }
+    }
+    span{
+      position: absolute;
+      font-size: 120px;
+      @include g.sub-font;
+      color: #CA7F1314;
+      @include g.pc{
+        left: 100px;
+        top: -60px;
+      }
+      @include g.sp{
+        font-size: 72px;
+        left: 30px;
+        top: -40px;
+      }
+    }
+    p{
+      color: g.$main-color;
+      font-size: 14px;
+      margin-top: -30px;
+      @include g.sp{
+        margin-top: -10px;
+      }
+    }
+  }
+
+  &__menu{
+    @include g.pc{
+      width: 70%;
+      margin: 80px 0 0 auto;
+    }
+    @include g.sp{
+      margin-top: 60px;
+    }
+  }
+}
+
+.faqTop{
+  width: 100%;
+  margin-bottom: 100px;
+  &__title{
+    width: 80%;
+    margin: 0 auto;
+    color: g.$main-color;
+    margin-bottom: 60px;
+    h2{
+      font-size: 84px;
+      position: relative;
+      @include g.sp{
+        font-size: 48px;
+      }
+      span{
+        position: absolute;
+        @include g.sub-font;
+        color: #CA7F1314;
+        @include g.pc{
+          top: -30px;
+          left: 50px;
+        }
+        @include g.sp{
+          top: -30px;
+          left: 30px;
+          font-size: 72px;
+        }
+      }
+    }
+    p{
+      margin-top: -20px;
+      @include g.sp{
+        margin-top: -10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.faq{
+  width: 100%;
+  &__accordion{
+    display: block;
+    margin: 0 auto;
+    background-color: g.$background-color2;
+    color: g.$main-color;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    @include g.pc{
+      width: 70%;
+    }
+    @include g.sp{
+      width: 90%;
+    }
+    &__q{
+      display: flex;
+      align-items: center;
+      
+      p{
+        display: inline-block;
+        transition: transform 0.3s ease;
+        margin-left: auto;
+        color: g.$sub-color1;
+        font-size: 12px;
+        margin-right: 10px;
+      }
+      span{
+        font-size: 24px;
+        margin-right: 20px;
+        @include g.sp{
+          font-size: 18px;
+          margin-right: 10px;
+        }
+      }
+      h3{
+        font-size: 18px;
+        letter-spacing: 0.72px;
+        text-align: left;
+        @include g.sp{
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__a{
+      display: flex;
+      text-align: left;
+      margin-top: 20px;
+      span{
+        font-size: 24px;
+        margin-right: 20px;
+        @include g.sp{
+          font-size: 18px;
+        }
+      }
+
+      p{
+        font-size: 18px;
+        @include g.sp{
+          font-size: 14px;
         }
       }
     }
