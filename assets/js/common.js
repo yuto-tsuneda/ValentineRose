@@ -79,4 +79,22 @@ $('.featurePc__content__right').on('afterChange', function(event, slick, current
       jQuery(this).find('.faq__accordion__q p').css('transform', 'rotate(180deg)');
     }
   });
+
+  //scrollTop
+
+    $('.footerNav__goTop__scroll').click(function(event){
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+
+
+
+
+
+
+
+
+
+
 });
+

@@ -4,13 +4,23 @@
   color: g.$main-color;
   width: 100%;
   margin-top: 50px;
+  margin-bottom: 100px;
+  @include g.sp{
+    margin-top: 10px;
+  }
 
   h2{
     font-size: 80px;
+    @include g.sp{
+      font-size: 60px;
+    }
   }
 
   p{
     font-size: 16px;
+    @include g.sp{
+      font-size: 12px;
+    }
   }
   
   &__flex{
@@ -19,20 +29,41 @@
     justify-content: center;
     text-align: center;
     height: 300px;
+    @include g.sp{
+      display: block;
+      height: auto;
+    }
   }
 
   &__left{
     width: 45%;
+    @include g.sp{
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      padding-top: 50px;
+      border-bottom: 1px solid g.$main-color;
+    }
   }
 
   &__right{
     width: 45%;
+    @include g.sp{
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      padding-top: 50px;
+      border-bottom: 1px solid g.$main-color;
+    }
   }
 
   &__center{
     width: 1px;
     height: 250px;
     background-color: g.$main-color;
+    @include g.sp{
+      display: none;
+    }
   }
 
   &__underbar{
@@ -41,5 +72,8 @@
     background-color: g.$main-color;
     margin: 0 auto;
     margin-top: 20px;
+    @include g.sp{
+      display: none;
+    }
   }
 }
