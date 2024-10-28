@@ -15,3 +15,6 @@
     <?php wp_head(); ?>
   </head>
   <body>
+  <header>
+    <?php get_template_part('assets/template-parts/top-nav/nav');?>
+  </header>
