@@ -690,6 +690,12 @@ body {
   margin: 0 10px;
 }
 
+.bled {
+  color: #CA7F13;
+  font-size: 18px;
+  padding-left: 3%;
+}
+
 .mainVisual {
   position: relative;
   width: 100%;
