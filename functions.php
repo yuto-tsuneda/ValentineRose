@@ -18,7 +18,10 @@ function theme_enqueue_scripts(){
 
   if(is_page('concept')){
     wp_enqueue_style('concept-style', $theme_directory . '/assets/css/page-concept.css', array('common-style'), null);
-    wp_enqueue_script('concept-script', $theme_directory . '/assets/js/page-concept.js', array('common-script'), null, true);
+  }
+
+  if(is_page('price')){
+    wp_enqueue_style('price-style', $theme_directory . '/assets/css/page-price.css', array('common-style'), null);
   }
 }
 add_action('wp_enqueue_scripts','theme_enqueue_scripts');

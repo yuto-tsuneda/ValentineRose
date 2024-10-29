@@ -1,0 +1,305 @@
+@use "../global" as g;
+
+.price{
+  &__header{
+    height: 110px;
+    background-color: g.$background-color1;
+    @include g.sp{
+      height: 80px;
+    }
+  }
+
+  &__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: g.$background-color2;
+    height: 360px;
+    width: 100%;
+    color: g.$main-color;
+    font-size: 60px;
+    letter-spacing: 8px;
+    @include g.sp{
+      font-size: 20px;
+      letter-spacing: 3.2px;
+      height: 200px;
+    }
+  }
+
+  &__menuNav{
+    margin-top: 15px;
+    &__flex{
+      display: flex;
+      width: 84%;
+      margin: 80px auto 100px;
+      @include g.sp{
+        flex-direction: column-reverse;
+        width: 86%;
+        margin: 80px auto 80px;
+      }
+    }
+    &__left{
+      width: 50%;
+      @include g.sp{
+        width: 100%;
+      }
+      p{
+        width: 95%;
+        color: rgba( 202, 127, 19, 0.8);
+        font-size: 16px;
+        letter-spacing: 1.4px;
+        line-height: 36px;
+        @include g.sp{
+          width: 100%;
+        }
+      }
+    }
+    &__right{
+      width: 50%;
+      @include g.sp{
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__menuContent{
+    background-color: g.$background-color2;
+    padding: 57px 0 63px;
+    text-align: center;
+    h3{
+      font-size: 84px;
+      font-weight: normal;
+      letter-spacing: 3.36px;
+      color: g.$main-color;
+      margin-bottom: 40px;
+      @include g.sp{
+        margin-bottom: 58px;
+      }
+    }
+    h4{
+      font-size: 24px;
+      letter-spacing: 2.4px;
+      color: g.$main-color;
+      margin-bottom: 32px;
+      & + p{
+        font-size: 18px;
+        letter-spacing: 1.8px;
+        color: g.$main-color;
+        width: 45%;
+        margin: 0 auto;
+        margin-bottom: 64px;
+        @include g.sp{
+          text-align: left;
+          width: 90%;
+          margin: 0 auto;
+          font-size: 14px;
+          line-height: 32px;
+        }
+      }
+    }
+    table{
+      width: 60%;
+      margin: 0 auto;
+      color: g.$main-color;
+      tr{
+        &:nth-child(1){
+          th{
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+        &:nth-child(n + 2){
+          th:nth-child(1){
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+        th{
+          border-bottom: 1px solid g.$main-color;
+          padding: 15px 0;
+        }
+      }
+      & + p{
+        color: g.$main-color;
+        font-size: 12px;
+        letter-spacing: 0.48px;
+        text-align: right;
+        width: 56%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 80px;
+      }
+    }
+    &__lastp{
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__menuContentSp{
+    color: g.$main-color;
+    background-color: g.$background-color2;
+    padding-top: 56px;
+    padding-bottom: 50px;
+    h3{
+      width: fit-content;
+      margin: 0 auto;
+      font-size: 84px;
+      margin-bottom: 48px;
+      letter-spacing: 3.36px;
+      & + p{
+        width: fit-content;
+        margin: 0 auto;
+        font-size: 18px;
+      }
+      & + h4:first-child{
+        margin-top: 0 !important;
+      }
+    }
+    h4{
+      font-size: 18px;
+      letter-spacing: 1.8px;
+      width: fit-content;
+      margin: 32px auto;
+      & + p{
+        font-size: 14px;
+        width: 90%;
+        margin: 0 auto;
+
+        & + p{
+          font-size: 18px;
+          margin: 32px auto 40px;
+          width: fit-content;
+        }
+      }
+    }
+    table{
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      tr{
+        font-size: 16px;
+        th{
+          border-bottom: 1px solid g.$main-color;
+          padding: 20px 0;
+        }
+        &:nth-child(1){
+          th{
+            font-weight: normal;
+          }
+        }
+        &:nth-child(n + 2){
+          th:nth-child(1){
+            font-weight: normal;
+          }
+        }
+      }
+      & + p{
+        width: 90%;
+        margin: 12px auto 0;
+      }
+    }
+    &__body{
+      margin-bottom: 68px;
+    }
+    &__vline{
+      p{
+        width: fit-content !important;
+        margin: 0 auto 40px !important;
+        font-size: 18px;
+      }
+      table{
+        margin-bottom: 67px;
+      }
+    }
+    &__set{
+      p{
+        width: fit-content !important;
+        margin: 0 auto 40px !important;
+        font-size: 18px;
+      }
+      table{
+        margin-bottom: 67px;
+      }
+    }
+    &__lastTable{
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__custom{
+    margin: 80px 0;
+    &__flex{
+      display: flex;
+      width: 85%;
+      margin: 0 auto;
+      justify-content: center;
+      gap: 60px;
+      @include g.sp{
+        display: block;
+      }
+    }
+    &__left{
+      img{
+        width: 480px;
+        height: auto;
+        @include g.sp{
+          width: 240px;
+          height: auto;
+          margin: 0 auto 60px;
+        }
+      }
+    }
+    &__right{
+      width: 48%;
+      color: g.$main-color;
+      @include g.sp{
+        width: 100%;
+      }
+      h3{
+        font-size: 48px;
+        font-weight: normal;
+        margin-bottom: 54px;
+        @include g.sp{
+          margin-bottom: 12px;
+        }
+      }
+      p{
+        color: rgba(202, 127, 19, 0.8);
+        font-size: 16px;
+        letter-spacing: 1.8px;
+        line-height: 36px;
+        @include g.sp{
+          font-size: 14px;
+          letter-spacing: 1.4px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+.priceMenu{
+  ul{
+    li{
+      font-size: 33px !important;
+      @include g.sp{
+        font-size: 20px !important;
+        padding-bottom: 5px !important;
+        letter-spacing: 0.8px !important;
+        margin-bottom: 5px !important;
+      }
+      span{
+        font-size: 9px !important;
+        @include g.sp{
+          font-size: 12px in !important;
+          margin: auto 0 3px 10px !important;
+          letter-spacing: 0.48px !important;
+        }
+      }
+    }
+    i{
+      font-size: 14px;
+    }
+  }
+}
