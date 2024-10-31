@@ -2,7 +2,7 @@
 
 <div class="salons">
   <div class="salons__header"></div>
-    <div class="salons__title">
+  <div class="salons__title">
     <p>VALENTINE ROSE</p>
     <h2><?php echo get_field('store-name'); ?></h2>
   </div>
@@ -11,17 +11,16 @@
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/single-salons_top-pc.webp" alt="店舗紹介トップ画像PC">
     </div>
     <div class="sp">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/single-salons_top-sp.webp" alt="店舗紹介トップ画像SP">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/single-salons_top-sp.webp" alt="店舗紹介トップ画像SP">
     </div>
   </div>
   <div class="bled">
-    <?php if(function_exists('bcn_display'))
-      {
-        bcn_display();
-      }?>
+    <?php if (function_exists('bcn_display')) {
+      bcn_display();
+    } ?>
   </div>
   <div class="salons__infor">
-      <p><?php echo nl2br(esc_html(get_field('store-infor'))); ?></p>
+    <p><?php echo nl2br(esc_html(get_field('store-infor'))); ?></p>
   </div>
   <div class="salons__flow">
     <div class="salons__flow__title">
@@ -39,9 +38,9 @@
       </div>
       <div class="salons__flow__contentsCenter">
         <?php
-          $flow = SCF::get('flow');
-          $count = 1;
-          foreach ($flow as $item) :?>
+        $flow = SCF::get('flow');
+        $count = 1;
+        foreach ($flow as $item) : ?>
           <div class="salons__flow__contentsCenterCover">
             <p class="salons__flow__contentsCenterCoverNumber  <?php echo ($count === 1) ? 'first' : ''; ?>"><?php echo $count; ?></p>
             <h4 class="salons__flow__contensCenterCoverTitle"><?php echo $item['flow-title']; ?></h4>
@@ -87,9 +86,9 @@
       </div>
       <div class="salons__storeMap__right">
         <?php
-          $google_map = get_field('googlemap');
-          $google_map_with_class = str_replace('<iframe', '<iframe class="salons__storeMap__map"', $google_map);
-          echo $google_map_with_class;
+        $google_map = get_field('googlemap');
+        $google_map_with_class = str_replace('<iframe', '<iframe class="salons__storeMap__map"', $google_map);
+        echo $google_map_with_class;
         ?>
       </div>
     </div>

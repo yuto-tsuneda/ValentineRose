@@ -1,0 +1,167 @@
+@use "../global" as g;
+
+.news{
+  &__header{
+    height: 110px;
+    background-color: g.$background-color1;
+    @include g.sp{
+      height: 80px;
+    }
+  }
+
+  &__title{
+    display: flex;
+    flex-direction: column;
+    background-color: g.$background-color2;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    width: 100%;
+    color: g.$main-color;
+    text-align: center;
+    gap: 0;
+    p{
+      width: 100%;
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 4.8px;
+      @include g.sp{
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        margin-bottom: 8px;
+      }
+    }
+    h2{
+      width: 100%;
+      font-size: 80px;
+      margin: 0;
+      letter-spacing: 8px;
+      @include g.sp{
+        font-size: 32px;
+        letter-spacing: 3.2px;
+        line-height: 35px;
+      }
+    }
+    @include g.sp{  
+      height: 200px;
+    }
+  }
+  &__content{
+    width: 85%;
+    margin: 112px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 162px;
+    @include g.sp{
+      margin: 80px auto 0;
+      width: 90%;
+      display: block;
+    }
+    &__left{
+      max-width: 691px;
+      @include g.sp{
+        width: 100%;
+        margin-bottom: 32px;
+      }
+      h3{
+        font-size: 24px;
+        color: g.$main-color;
+        @include g.sp{
+          font-size: 18px;
+        }
+      }
+      img{
+        margin-bottom: 32px;
+      }
+      h4{
+        font-size: 18px;
+        color: g.$main-color;
+        margin-bottom: 12px;
+        @include g.sp{
+          font-size: 16px;
+          margin-bottom: 12px;
+        }
+        & + p{
+          font-size: 16px;
+          color: g.$main-font;
+          margin-bottom: 32px;
+          @include g.sp{
+            font-size: 14px;
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+    &__date{
+      display: flex;
+      font-size: 14px;
+      gap: 12px;
+      color: g.$main-color;
+      margin-bottom: 40px;
+      @include g.sp{
+        margin-bottom: 16px;
+        font-size: 12px;
+      }
+    }
+    &__infor{
+      font-size: 16px;
+      margin-bottom: 34px;
+      color: g.$main-font;
+      @include g.sp{
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+    }
+    &__right{
+      border-left: 1px solid g.$main-color;
+      height: fit-content;
+      padding-left: 20px;
+      @include g.sp{
+        padding: 0;
+        border: none;
+
+      }
+      p{
+        color: g.$main-color;
+        font-size: 32px;
+        @include g.sp{
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &__category{
+      color: g.$main-color;
+      font-size: 16px;
+      @include g.sp{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+        gap: 10px 0;
+        li{
+          width: 150px;
+        }
+      }
+    }
+  }
+  &__more{
+    text-align: center;
+    margin-bottom: 182px;
+    @include g.sp{
+      margin-bottom: 45px;
+    }
+    a{
+      width: fit-content;
+      padding: 10px 40px;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 20px;
+      margin: 0 auto;
+      background-color: g.$sub-color2;
+    }
+  }
+}
+.bled{
+  margin-top: 24px;
+  font-size: 14px;
+}
