@@ -1,7 +1,7 @@
 <div class=snsLink>
   <div class="snsLink__flex">
     <div class="snsLink__left">
-      <a href="">
+      <a href="<?php echo get_post_type_archive_link('salons'); ?>">
         <h2>SALONS</h2>
         <p>店舗一覧</p>
       </a>

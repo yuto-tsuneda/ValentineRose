@@ -1,0 +1,412 @@
+@use "../global" as g;
+
+.salons{
+  &__header{
+    height: 110px;
+    background-color: g.$background-color1;
+    @include g.sp{
+      height: 80px;
+    }
+  }
+
+  &__title{
+    display: flex;
+    flex-direction: column;
+    background-color: g.$background-color2;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    width: 100%;
+    color: g.$main-color;
+    text-align: center;
+    gap: 0;
+    p{
+      width: 100%;
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 4.8px;
+      @include g.sp{
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        margin-bottom: 8px;
+      }
+    }
+    h2{
+      width: 100%;
+      font-size: 80px;
+      margin: 0;
+      letter-spacing: 8px;
+      @include g.sp{
+        font-size: 32px;
+        letter-spacing: 3.2px;
+        line-height: 35px;
+      }
+    }
+    @include g.sp{  
+      height: 200px;
+    }
+  }
+  &__infor{
+    text-align: center;
+    color: #333333;
+    margin-top: 120px;
+    margin-bottom: 167px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    @include g.sp{
+      text-align: left;
+      width: 85%;
+      margin: 80px auto 110px;
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      line-height: 28px;
+    }
+  }
+  &__flow{
+    margin-bottom: 120px;
+    @include g.sp{
+      margin-bottom: 80px;
+    }
+    &__title{
+      width: 85%;
+      margin: 0 auto 82px;
+      @include g.sp{
+        width: 90%;
+      }
+      h3{
+        font-size: 84px;
+        letter-spacing: 3.36px;
+        position: relative;
+        color: g.$main-color;
+        @include g.sp{
+          font-size: 48px;
+        }
+        span{
+          position: absolute;
+          top: -50px;
+          left: 80px;
+          font-size: 120px;
+          color: #CA7F1314;
+          @include g.sub-font;
+          @include g.sp{
+            font-size: 72px;
+            top: -30px;
+            left: 55px;
+          }
+        }
+      }
+      p{
+        color: g.$main-color;
+        margin-top: -20px;
+        @include g.sp{
+          margin-top: -10px;
+        }
+      }
+    }
+    &__contents{
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      @include g.sp{
+        position: relative;
+        display: block;
+      }
+      &Left{
+        width: 20%;
+        img{
+          border-radius: 50%;
+          @include g.sp{
+            position: absolute;
+          }
+          &:nth-child(1){
+            margin: 40% auto 0;
+            @include g.sp{
+              top: 14%;
+              left: 0;
+              margin: 0;
+              width: 30%;
+              z-index: -1;
+            }
+          }
+          &:nth-child(2){
+            margin: 300% auto 0;
+            @include g.sp{
+              top: 84%;
+              left: 0;
+              margin: 0;
+              width: 30%;
+              z-index: -1;
+            }
+          }
+        }
+      }
+      &Center{
+        width: 60%;
+        @include g.sp{
+          width: 85%;
+          margin: 0 auto;
+        }
+      }
+      &Right{
+        width: 20%;
+        img{
+          margin: 200% auto 0;
+          border-radius: 50%;
+          @include g.sp{
+            position: absolute;
+            right: -20px;
+            top: 3%;
+            width: 30%;
+            z-index: -1;
+          }
+        }
+      }
+    }
+    &__contentsCenterCover{
+      width: 100%;
+      margin: 0 auto 30px;
+      position: relative;
+      display: block;
+      color: g.$main-color;
+      @include g.sp{
+        margin-bottom: 32px;
+      }
+      &Number{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        background-color: g.$sub-color2;
+        text-align: center;
+        color: g.$background-color1;
+        font-size: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include g.sp{
+          position: static;
+          margin: 0 auto 12px;
+          &.first::after{
+            display: none;
+          }
+        }
+        &::after{
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 60px;
+          width: 1px;
+          height: 80px;
+          background: repeating-linear-gradient(
+            to bottom,
+            #333333, // 点の色
+            #333333 2px, // 点の幅
+            transparent 2px, // 点と点の間の幅
+            transparent 5px // 全体の幅
+          );
+          transform: translateX(-50%);
+          @include g.sp{
+            top: -30px;
+            height: 28px;
+            background: repeating-linear-gradient(
+            to bottom,
+            #333333, // 点の色
+            #333333 2px, // 点の幅
+            transparent 3px, // 点と点の間の幅
+            transparent 8px // 全体の幅
+          );
+          }
+        }
+      }
+      h4{
+        font-size: 24px;
+        letter-spacing: 0.96px;
+        width: fit-content;
+        margin: 0  0 14px 100px;
+        font-weight: 600;
+        @include g.sp{
+          margin: 0 auto 12px;
+          text-align: center;
+        }
+        + p{
+          font-size: 18px;
+          letter-spacing: 1.8px;
+          line-height: 27px;
+          width: fit-content;
+          margin: 0 0 0 100px;
+          @include g.sp{
+            margin: 0;
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+  &__staff{
+    padding: 80px 0;
+    background-color: #464646;
+    color: g.$main-color;
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    @include g.sp{
+      padding: 60px 0 40px;
+    }
+
+    &__flex{
+      display: flex;
+      width: 85%;
+      margin: 0 auto;
+      gap: 60px;
+      @include g.sp{
+        display: block;
+      }
+    }
+    &__left{
+      width: fit-content;
+      @include g.sp{
+        width: 240px;
+        height: 240px;
+        margin: 0 auto;
+      }
+    }
+    &__right{
+      width: 50%;
+      @include g.sp{
+        width: 85%;
+        margin: 0 auto;
+      }
+      h3{
+        font-size: 48px;
+        letter-spacing: 4.8px;
+        margin: 44px 0;
+        @include g.sp{
+          font-size: 36px;
+          letter-spacing: 3.6px;
+        }
+        span{
+          font-size: 14px;
+          color: rgba(202, 127, 19, 0.8);
+          margin-left: 24px;
+          @include g.sp{
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            margin-left: 16px;
+          }
+        }
+        & + p{
+          font-size: 18px;
+          letter-spacing: 1.8px;
+          line-height: 36px;
+          margin-bottom: 24px;
+          color: rgba(202, 127, 19, 0.8);
+          @include g.sp{
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            line-height: 28px;
+          }
+          & + p{
+            font-size: 24px;
+            letter-spacing: 2.4px;
+            @include g.sp{
+              font-size: 20px;
+              letter-spacing: 1.8px;
+            }
+            span{
+              font-size: 12px;
+              letter-spacing: 1.2px;
+              color: rgba(202, 127, 19, 0.8);
+              margin-left: 16px;
+              @include g.sp{
+                margin-left: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__storeMap{
+    background-color: g.$background-color2;
+    padding: 80px 0;
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    &__flex{
+      display: flex;
+      width: 85%;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      gap: 140px;
+      @include g.sp{
+        flex-direction: column-reverse;
+        gap: 40px;
+      }
+    }
+    &__left{
+      width: 38%;
+      @include g.sp{
+        width: 100%;
+      }
+      dl{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid g.$main-color;
+        dt{
+          margin: 16px 64px 16px 8px;
+          width: 86px;
+          color: g.$main-color;
+          font-size: 20px;
+          font-weight: 600;
+          @include g.sp{
+            font-size: 16px;
+            width: 80px;
+            margin-left: 0;
+            margin-right: 30px;
+          }
+        }
+        dd{
+          font-size: 14px;
+          color: #333333;
+          @include g.sp{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &__right{
+    }
+    &__map{
+      width: 540px;
+      height: 360px;
+      @include g.sp{
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+
+  &__more{
+    text-align: center;
+    margin: 120px 0;
+    @include g.sp{
+      margin: 80px 0;
+    }
+    a{
+      padding: 10px 40px;
+      background-color: g.$sub-color2;
+      border-radius: 21px;
+      color: #fff;
+    }
+  }
+}
+
+.bled{
+  margin-top: 24px;
+}

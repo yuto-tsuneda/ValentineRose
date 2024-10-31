@@ -1,0 +1,193 @@
+@use "../global" as g;
+
+.archiveSalons{
+  &__header{
+    height: 110px;
+    background-color: g.$background-color1;
+    @include g.sp{
+      height: 80px;
+    }
+  }
+
+  &__title{
+    display: flex;
+    flex-direction: column;
+    background-color: g.$background-color2;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    width: 100%;
+    color: g.$main-color;
+    text-align: center;
+    gap: 0;
+    p{
+      width: 100%;
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 4.8px;
+      @include g.sp{
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        margin-bottom: 8px;
+      }
+    }
+    h2{
+      width: 100%;
+      font-size: 80px;
+      margin: 0;
+      letter-spacing: 8px;
+      @include g.sp{
+        font-size: 32px;
+        letter-spacing: 3.2px;
+        line-height: 35px;
+      }
+    }
+    @include g.sp{  
+      height: 200px;
+    }
+  }
+  &__prefectures{
+    &__title{
+      color: g.$main-color;
+      width: 90%;
+      margin: 120px auto;
+      @include g.sp{
+        margin: 110px auto 80px;
+      }
+      h3{
+        font-size: 84px;
+        position: relative;
+        @include g.sp{
+          font-size: 48px;
+        }
+        span{
+          font-size: 120px;
+          @include g.sub-font;
+          color: #CA7F1314;
+          position: absolute;
+          top: -50px;
+          left: 80px;
+          @include g.sp{
+            font-size: 72px;
+          }
+        }
+      }
+      p{
+        margin-top: -20px;
+        font-size: 14px;
+        @include g.sp{
+          font-size: 12px;
+          margin-top: -10px;
+        }
+      }
+    }
+    &__category{
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px 60px;
+        width: 85%;
+        margin: 0 auto;
+        color: g.$main-color;
+        @include g.sp{
+          gap: 10px 20px;
+        }
+        li{
+          display: flex;
+          font-size: 48px;
+          @include g.sp{
+            font-size: 20px;
+          }
+          p{
+            font-size: 14px;
+            margin: auto 0 15px 16px;
+            @include g.sp{
+              font-size: 12px;
+              margin: auto 0 5px 5px;
+            }
+          }
+          i{
+            font-size: 18px;
+            margin: auto 5px auto 0;
+            color: g.$sub-color1;
+            @include g.sp{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    &__stores{
+      width: 90%;
+      margin: 0 auto;
+      @include g.sp{
+        width: 85%;
+      }
+      &__category{
+        width: 100%;
+        margin: 80px 0;
+      }
+      h3{
+        width: 100%;
+        text-align: center;
+        background-color: g.$main-color;
+        font-size: 48px;
+        padding: 30px 0;
+        margin-bottom: 60px;
+        color: #fff;
+        @include g.sp{
+          margin-bottom: 40px;
+          font-size: 24px;
+          padding: 15px 0;
+        }
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        @include g.sp{
+          display: block;
+        }
+      }
+      li{
+        width: 48%;
+        @include g.sp{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.salon{
+  &__map{
+    width: 100%;
+    height: 360px;
+    margin-bottom: 8px;
+    @include g.sp{
+      height: 200px;
+    }
+  }
+  &__nameEn{
+    color: g.$main-color;
+    font-size: 32px;
+    @include g.sp{
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+  }
+  &__name{
+    color: g.$main-color;
+    font-size: 16px;
+    @include g.sp{
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+  &__address{
+    color: #464646;
+    font-size: 14px;
+  }
+}

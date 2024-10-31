@@ -23,6 +23,14 @@ function theme_enqueue_scripts(){
   if(is_page('price')){
     wp_enqueue_style('price-style', $theme_directory . '/assets/css/page-price.css', array('common-style'), null);
   }
+
+  if(is_singular('salons')){
+    wp_enqueue_style('single-salons-style', $theme_directory . '/assets/css/single-salons.css', array('common-style'), null);
+  }
+
+  if(is_post_type_archive('salons')){
+    wp_enqueue_style('archive-salons', $theme_directory . '/assets/css/archive-salons.css', array('common-style'), null);
+  }
 }
 add_action('wp_enqueue_scripts','theme_enqueue_scripts');
 
@@ -162,5 +170,83 @@ function create_salons_taxonomy() {
 
 add_action('init', 'create_salons_taxonomy');
 
+//salons(sub_title)
+function add_salon_category_subtitle_field($term) {
+  $subtitle = get_term_meta($term->term_id, 'category_subtitle', true);
+  ?>
+  <tr class="form-field">
+      <th scope="row" valign="top"><label for="category_subtitle">サブタイトル</label></th>
+      <td>
+          <input type="text" name="category_subtitle" id="category_subtitle" value="<?php echo esc_attr($subtitle); ?>">
+          <p class="description">このカテゴリーのサブタイトルを入力してください</p>
+      </td>
+  </tr>
+  <?php
+}
+add_action('salon_category_edit_form_fields', 'add_salon_category_subtitle_field');
 
+function save_salon_category_subtitle_field($term_id) {
+  if (isset($_POST['category_subtitle'])) {
+      update_term_meta($term_id, 'category_subtitle', sanitize_text_field($_POST['category_subtitle']));
+  }
+}
+add_action('edited_salon_category', 'save_salon_category_subtitle_field');
+
+//categoryの順番
+function my_theme_add_admin_page() {
+  add_menu_page(
+      'カテゴリー順序設定', // ページタイトル
+      'カテゴリー順序',     // メニュータイトル
+      'manage_options',     // 権限
+      'category-order-settings', // スラッグ
+      'my_theme_category_order_settings_page', // 表示関数
+      'dashicons-list-view', // アイコン
+      100                     // 表示位置
+  );
+}
+add_action('admin_menu', 'my_theme_add_admin_page');
+
+function my_theme_category_order_settings_page() {
+  ?>
+  <div class="wrap">
+      <h1>カテゴリー順序設定</h1>
+      <form method="post" action="options.php">
+          <?php
+              settings_fields('my_category_order_settings');
+              do_settings_sections('category-order-settings');
+              submit_button();
+          ?>
+      </form>
+  </div>
+  <?php
+}
+
+function my_category_order_settings_init() {
+  register_setting('my_category_order_settings', 'custom_category_order');
+
+  add_settings_section(
+      'my_category_order_section',
+      '表示するカテゴリーの順序',
+      'my_category_order_section_callback',
+      'category-order-settings'
+  );
+
+  add_settings_field(
+      'custom_category_order_field',
+      'カテゴリー順序（カンマ区切りでスラッグを入力）',
+      'custom_category_order_field_callback',
+      'category-order-settings',
+      'my_category_order_section'
+  );
+}
+add_action('admin_init', 'my_category_order_settings_init');
+
+function my_category_order_section_callback() {
+  echo '<p>カテゴリースラッグをカンマで区切って入力してください（例: tokyo,kanagawa,saitama）。</p>';
+}
+
+function custom_category_order_field_callback() {
+  $custom_order = get_option('custom_category_order', '');
+  echo '<input type="text" id="custom_category_order" name="custom_category_order" value="' . esc_attr($custom_order) . '" style="width: 100%;">';
+}
 
