@@ -695,3 +695,203 @@ body {
   font-size: 18px;
   padding-left: 3%;
 }
+
+.archiveNews__header {
+  height: 110px;
+  background-color: #F9F8F6;
+}
+@media (max-width: 375px) {
+  .archiveNews__header {
+    height: 80px;
+  }
+}
+.archiveNews__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #D4CEBE;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 360px;
+  width: 100%;
+  color: #CA7F13;
+  text-align: center;
+  gap: 0;
+}
+.archiveNews__title p {
+  width: 100%;
+  font-size: 48px;
+  margin: 0;
+  letter-spacing: 4.8px;
+}
+@media (max-width: 375px) {
+  .archiveNews__title p {
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    margin-bottom: 8px;
+  }
+}
+.archiveNews__title h2 {
+  width: 100%;
+  font-size: 80px;
+  margin: 0;
+  letter-spacing: 8px;
+}
+@media (max-width: 375px) {
+  .archiveNews__title h2 {
+    font-size: 32px;
+    letter-spacing: 3.2px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 375px) {
+  .archiveNews__title {
+    height: 200px;
+  }
+}
+.archiveNews__content {
+  margin: 111px auto 120px;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 375px) {
+  .archiveNews__content {
+    display: block;
+    width: 100%;
+    margin: 80px 0;
+  }
+}
+.archiveNews__content__left {
+  width: 60%;
+}
+@media (max-width: 375px) {
+  .archiveNews__content__left {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.archiveNews__content__left .news-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 24px;
+  background-color: #D4CEBE;
+  margin-bottom: 20px;
+  color: #CA7F13;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 375px) {
+  .archiveNews__content__left .news-item {
+    display: block;
+    position: relative;
+    padding: 12px;
+  }
+}
+.archiveNews__content__left .news-item__date {
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  .archiveNews__content__left .news-item__date {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+.archiveNews__content__left .news-item__title {
+  font-size: 16px;
+  margin-left: 16px;
+}
+@media (max-width: 375px) {
+  .archiveNews__content__left .news-item__title {
+    font-size: 14px;
+    margin-left: 0;
+    width: 80%;
+  }
+}
+.archiveNews__content__left .news-item__slug {
+  margin-left: auto;
+  font-size: 32px;
+  color: rgba(84, 55, 45, 0.2);
+}
+@media (max-width: 375px) {
+  .archiveNews__content__left .news-item__slug {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 21px;
+  }
+}
+.archiveNews__content__right {
+  border-left: 1px solid #CA7F13;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-left: 20px;
+}
+@media (max-width: 375px) {
+  .archiveNews__content__right {
+    padding: 0;
+    border: none;
+    margin: 0 13px;
+  }
+}
+.archiveNews__content__right p {
+  color: #CA7F13;
+  font-size: 32px;
+}
+@media (max-width: 375px) {
+  .archiveNews__content__right p {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.news__content__category {
+  color: #CA7F13;
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  .news__content__category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 80px;
+    gap: 10px 0;
+  }
+  .news__content__category li {
+    width: 150px;
+  }
+}
+
+.bled {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.pagination {
+  color: #CA7F13;
+  font-size: 32px;
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .pagination {
+    font-size: 16px;
+  }
+}

@@ -34,11 +34,14 @@ function theme_enqueue_scripts()
   }
 
   if (is_singular('news')) {
-    wp_enqueue_style('single-salons-style', $theme_directory . '/assets/css/single-news.css', array('common-style'), null);
+    wp_enqueue_style('single-news-style', $theme_directory . '/assets/css/single-news.css', array('common-style'), null);
   }
 
   if (is_post_type_archive('news')) {
-    wp_enqueue_style('archive-salons', $theme_directory . '/assets/css/archive-news.css', array('common-style'), null);
+    wp_enqueue_style('archive-news-salons', $theme_directory . '/assets/css/archive-news.css', array('common-style'), null);
+  }
+  if(is_tax('news_category')){
+    wp_enqueue_style('news-category' , $theme_directory . '/assets/css/archive-news.css', array('common-style'), null);
   }
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');

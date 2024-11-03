@@ -1,1 +1,157 @@
 @use "../global" as g;
+
+.archiveNews {
+  &__header {
+    height: 110px;
+    background-color: g.$background-color1;
+    @include g.sp {
+      height: 80px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    background-color: g.$background-color2;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    width: 100%;
+    color: g.$main-color;
+    text-align: center;
+    gap: 0;
+    p {
+      width: 100%;
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 4.8px;
+      @include g.sp {
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        margin-bottom: 8px;
+      }
+    }
+    h2 {
+      width: 100%;
+      font-size: 80px;
+      margin: 0;
+      letter-spacing: 8px;
+      @include g.sp {
+        font-size: 32px;
+        letter-spacing: 3.2px;
+        line-height: 35px;
+      }
+    }
+    @include g.sp {
+      height: 200px;
+    }
+  }
+  &__content {
+    margin: 111px auto 120px;
+    width: 85%;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    @include g.sp{
+      display: block;
+      width: 100%;
+      margin: 80px 0;
+    }
+    &__left {
+      width: 60%;
+      @include g.sp{
+        width: 90%;
+        margin: 0 auto;
+      }
+      .news-item {
+        display: flex;
+        padding: 10px 24px;
+        background-color: g.$background-color2;
+        margin-bottom: 20px;
+        color: g.$main-color;
+        align-items: center;
+        @include g.sp{
+          display: block;
+          position: relative;
+          padding: 12px;
+        }
+        &__date {
+          font-size: 16px;
+          @include g.sp{
+            font-size: 14px;
+            margin-bottom: 8px;
+          }
+        }
+        &__title {
+          font-size: 16px;
+          margin-left: 16px;
+          @include g.sp{
+            font-size: 14px;
+            margin-left: 0;
+            width: 80%;
+          }
+        }
+        &__slug{
+          margin-left: auto;
+          font-size: 32px;
+          color: #54372D33;
+          @include g.sp{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+    &__right{
+      border-left: 1px solid g.$main-color;
+      height: fit-content;
+      padding-left: 20px;
+      @include g.sp{
+        padding: 0;
+        border: none;
+        margin: 0 13px;
+      }
+      p{
+        color: g.$main-color;
+        font-size: 32px;
+        @include g.sp{
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+.news {
+  &__content {
+    &__category {
+      color: g.$main-color;
+      font-size: 16px;
+      @include g.sp {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+        gap: 10px 0;
+        li {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+.bled {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.pagination{
+  color: g.$main-color;
+  font-size: 32px;
+  text-align: center;
+  @include g.sp{
+    font-size: 16px;
+  }
+}

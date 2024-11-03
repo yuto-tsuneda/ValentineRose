@@ -23,12 +23,27 @@
       // ページ番号を取得
       $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-      // カスタム投稿タイプ 'news' の全投稿を取得
+      // 選択されたカテゴリーのスラッグを取得
+      $current_category = get_queried_object();
+      $category_slug = isset($current_category->slug) ? $current_category->slug : '';
+
+      // カスタム投稿タイプ 'news' のクエリ設定
       $args = array(
         'post_type' => 'news',
         'posts_per_page' => 10, // 取得する投稿数
         'paged' => $paged, // ページネーション
       );
+
+      // カテゴリーが選択されている場合、そのカテゴリーに絞り込み
+      if (!empty($category_slug)) {
+        $args['tax_query'] = array(
+          array(
+            'taxonomy' => 'news_category',
+            'field' => 'slug',
+            'terms' => $category_slug,
+          ),
+        );
+      }
 
       $query = new WP_Query($args);
       if ($query->have_posts()) {
@@ -37,12 +52,12 @@
           
           // 最初のカテゴリーのスラッグを取得
           $categories = get_the_terms(get_the_ID(), 'news_category');
-          $category_slug = !empty($categories) && !is_wp_error($categories) ? $categories[0]->slug : '';
+          $post_category_slug = !empty($categories) && !is_wp_error($categories) ? $categories[0]->slug : '';
       ?>
           <a href="<?php the_permalink(); ?>" class="news-item">
             <div class="news-item__date"><?php echo get_the_date('Y.m.d'); ?></div>
             <h3 class="news-item__title"><?php the_title(); ?></h3>
-            <div class="news-item__slug"><?php echo esc_html($category_slug); ?></div>
+            <div class="news-item__slug"><?php echo esc_html($post_category_slug); ?></div>
           </a>
       <?php
         }
@@ -72,7 +87,8 @@
       echo '<li><a href="' . esc_url(get_post_type_archive_link('news')) . '">すべて</a></li>';
       if (!empty($terms) && !is_wp_error($terms)) {
         foreach ($terms as $term) {
-          echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+          $class = ($term->slug === $category_slug) ? 'class="active"' : '';
+          echo '<li><a href="' . esc_url(get_term_link($term)) . '" ' . $class . '>' . esc_html($term->name) . '</a></li>';
         }
       } else {
         echo '<li>カテゴリーが見つかりませんでした。</li>';
