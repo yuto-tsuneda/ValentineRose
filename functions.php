@@ -43,6 +43,15 @@ function theme_enqueue_scripts()
   if(is_tax('news_category')){
     wp_enqueue_style('news-category' , $theme_directory . '/assets/css/archive-news.css', array('common-style'), null);
   }
+  if(is_page('reserve')){
+    wp_enqueue_style('reserve-category' , $theme_directory . '/assets/css/page-reserve.css', array('common-style'), null);
+  }
+  if(is_page('reserve-confirm')){
+    wp_enqueue_style('reserve-confirm-category' , $theme_directory . '/assets/css/page-reserve.css', array('common-style'), null);
+  }
+  if(is_page('reserve-complete')){
+    wp_enqueue_style('reserve-complete-category' , $theme_directory . '/assets/css/page-reserve.css', array('common-style'), null);
+  }
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 

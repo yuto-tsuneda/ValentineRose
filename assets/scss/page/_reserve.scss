@@ -1,0 +1,466 @@
+@use "../global" as g;
+
+.reserve {
+  &__header {
+    height: 110px;
+    background-color: g.$background-color1;
+    @include g.sp {
+      height: 80px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    background-color: g.$background-color2;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    width: 100%;
+    color: g.$main-color;
+    text-align: center;
+    gap: 0;
+    p {
+      width: 100%;
+      font-size: 48px;
+      margin: 0;
+      letter-spacing: 4.8px;
+      @include g.sp {
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        margin-bottom: 8px;
+      }
+    }
+    h2 {
+      width: 100%;
+      font-size: 80px;
+      margin: 0;
+      letter-spacing: 8px;
+      @include g.sp {
+        font-size: 32px;
+        letter-spacing: 3.2px;
+        line-height: 35px;
+      }
+    }
+    @include g.sp {
+      height: 200px;
+    }
+  }
+  &__dl {
+    display: flex;
+    align-items: center;
+    gap: 101px;
+    width: 85%;
+    margin: 0 auto;
+    color: g.$main-color;
+    margin-top: 121px;
+    margin-bottom: 121px;
+    @include g.sp{
+      flex-direction: column-reverse;
+      width: 90%;
+      gap: 24px;
+      margin-bottom: 32px;
+      margin-top: 80px;
+    }
+    &__left {
+      width: 63%;
+      @include g.sp{
+        width: 100%;
+      }
+      h3 {
+        font-size: 32px;
+        margin-bottom: 42px;
+        @include g.sp{
+          font-size: 24px;
+        }
+      }
+      p {
+        font-size: 18px;
+        @include g.sp{
+          font-size: 14px;
+        }
+      }
+    }
+    &__right {
+      background-color: #d4cebe;
+      padding: 32px 43px 45px;
+      height: fit-content;
+      text-align: center;
+      p {
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+      a {
+        background-color: g.$sub-color2;
+        padding: 10px 37px 10px 25px;
+        color: #fff;
+        i {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+  &__tell {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: g.$main-color;
+    margin-bottom: 120px;
+    @include g.sp{
+      width: 90%;
+      display: block;
+      margin-bottom: 87px;
+    }
+    &__left {
+      padding-right: 60px;
+      border-right: 1px solid g.$main-color;
+      width: 62%;
+      @include g.sp{
+        width: 100%;
+        border: none;
+        padding: 0;
+      }
+      h3 {
+        font-size: 48px;
+        @include g.sp{
+          width: fit-content;
+          margin: 0 auto;
+          font-size: 24px;
+          margin-bottom: 12px;
+        }
+      }
+      p {
+        font-size: 18px;
+        @include g.sp{
+          font-size: 14px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    &__right {
+      margin-left: 100px;
+      @include g.sp{
+        margin: 0;
+        text-align: center;
+      }
+      a {
+        font-size: 32px;
+        @include g.sp{
+          font-size: 24px;
+        }
+      }
+      p {
+        font-size: 14px;
+        border: 1px solid g.$main-color;
+        border-radius: 50px;
+        text-align: center;
+        margin-top: 36px;
+        @include g.sp{
+          width: fit-content;
+          margin: 16px auto 0;
+          padding: 0 34px;
+        }
+      }
+    }
+  }
+  &__contact {
+    background-color: #ede9e4;
+    padding: 80px 0;
+    @include g.sp{
+      padding: 60px 0;
+    }
+    &__title {
+      display: flex;
+      width: 85%;
+      margin: 0 auto 90px;
+      gap: 96px;
+      @include g.sp{
+        display: block;
+        width: 90%;
+      }
+    }
+    &__left {
+      @include g.sp{
+        margin-bottom: 38px;
+      }
+      h3 {
+        color: g.$main-color;
+        font-size: 48px;
+        margin-bottom: 48px;
+        @include g.sp{
+          font-size: 32px;
+          margin-bottom: 16px;
+        }
+      }
+      p {
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+    &__rightFlex {
+      display: flex;
+      gap: 26px;
+      height: 100%;
+      @include g.sp{
+        gap: 18px;
+      }
+      &--wrap {
+        padding: 0 23px;
+        border-top: 1px solid #707070;
+        border-bottom: 1px solid #707070;
+        color: #707070;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include g.sp{
+          padding: 40px 10px;
+          margin: 0 auto;
+        }
+        p {
+          width: 100%;
+          height: fit-content;
+          @include g.sp{
+            font-size: 14px !important;
+          }
+        }
+        h4 {
+          width: 100%;
+          height: fit-content;
+          @include g.sp{
+            font-size: 16px !important;
+          }
+        }
+        &.just {
+          border-top: 1px solid g.$main-color;
+          border-bottom: 1px solid g.$main-color;
+          color: g.$main-color;
+        }
+      }
+    }
+  }
+  &__thanks {
+    text-align: center;
+    color: g.$main-color;
+    @include g.sp{
+      width: 90%;
+      text-align: left;
+      margin: 0 auto;
+    }
+    & p:first-child {
+      font-size: 36px;
+      @include g.sp{
+        font-size: 24px;
+      }
+    }
+    &__wrap {
+      text-align: left;
+      width: fit-content;
+      margin: 18px auto 0;
+      p {
+        font-size: 18px !important;
+        @include g.sp{
+          font-size: 14px !important;
+        }
+      }
+    }
+    a {
+      font-size: 18px;
+      text-decoration: underline;
+      @include g.sp{
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.cf7 {
+  width: 85%;
+  margin: 0 auto;
+  @include g.sp{
+    width: 90%;
+  }
+  input {
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+  }
+  textarea {
+    background-color: #fff;
+    width: 100%;
+  }
+  &__flex {
+    display: flex;
+    margin-bottom: 32px;
+    @include g.sp{
+      margin-bottom: 27px;
+      display: block;
+    }
+    p {
+      font-size: 16px;
+      width: 30%;
+      @include g.sp{
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      span {
+        font-size: 14px;
+        margin-right: 16px;
+        @include g.sp{
+          font-size: 12px;
+        }
+      }
+      & + p {
+        width: 70%;
+        @include g.sp{
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__must {
+    background-color: #54372d;
+    padding: 5px 18px;
+    color: #fff;
+    border-radius: 50px;
+  }
+  &__any {
+    background-color: g.$background-color2;
+    padding: 5px 18px;
+    border-radius: 50px;
+  }
+  &__checkbox {
+    width: 70%;
+    @include g.sp{
+      width: 100%;
+    }
+    &__flex {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      @include g.sp{
+        display: block;
+        .wpcf7-form-control{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px 24px;
+        }
+        .wpcf7-list-item{
+          margin: 0;
+        }
+      }
+      p {
+        width: fit-content;
+        font-size: 14px;
+        & + p {
+          width: 90%;
+          @include g.sp{
+            width: 100%;
+          }
+        }
+      }
+    }
+    input {
+      width: 30px;
+      height: 30px;
+      margin-right: 12px;
+    }
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__q {
+    p {
+      width: 100%;
+      span{
+        @include g.sp{
+          margin: 0;
+        }
+      }
+    }
+    .wpcf7-form-control.wpcf7-checkbox {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      @include g.sp{
+        display: block;
+      }
+    }
+    .wpcf7-list-item-label {
+      width: 210px;
+    }
+  }
+  i {
+    background-color: g.$main-color;
+    color: #fff;
+    font-size: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  &__cal {
+    width: 64%;
+    @include g.sp{
+      width: 100%;
+    }
+    p {
+      width: 100%;
+      display: flex;
+      span {
+        margin: 0;
+        width: 50%;
+        @include g.sp{
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__wrap {
+    width: 70%;
+    @include g.sp{
+      width: 100%;
+    }
+    p {
+      width: 100%;
+      font-size: 14px;
+      & + p {
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+  }
+  &__button {
+    width: 160px;
+    margin: 0 auto;
+    input {
+      background-color: g.$sub-color2;
+      border-radius: 50px;
+      color: #fff;
+    }
+  }
+}
+
+.reserveMenu {
+  display: none;
+}
+
+.wpcf7-submit {
+  width: 160px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none; /* Chrome、Safari のデフォルトアイコンを非表示にする */
+}
+input[type="date"]::-moz-calendar-picker-indicator {
+  display: none; /* Firefox のデフォルトアイコンを非表示にする（対応している場合） */
+}
+
+.bled {
+  margin-top: 17px;
+  font-size: 18px;
+}
